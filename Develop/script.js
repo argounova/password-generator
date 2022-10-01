@@ -1,7 +1,7 @@
 // User variables
 var passwordLength;
 
-// var lowercase;
+var lowercase;
 // var uppercase;
 // var numeric;
 // var special;
@@ -14,18 +14,22 @@ var password = document.getElementById("password");
 function writePassword() {
   // Use this number to determine the length of the password
   let passwordLength = (parseInt(prompt("Enter a number between 8 and 128"))) - 1;
+  
   // Password variables
-  // var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  // var numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  // var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]", ";"];
+  var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var alphaUpper = alpha.map(element => {
+    return element.toUpperCase();
+  });
+  var numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]", ";"];
   // This variable will be a string including all of the characters chosen by the user
-  var includedChars = "abcdefjhiklmnopqrstuv0192344567";
+  var allChars = alpha.concat(numeric, specialChars, alphaUpper);
+  var includedChars = allChars.join(""); /*alpha.join(""), numeric.join("");*/
   var password = "";
-
-
   
   // If lowercase is true, the alpha variable is added to the password array
   // lowercase = confirm("Include lowercase letters?");
+  // lowercase = alpha
 
   // If uppercase is true, the alpha variable is converted to uppercase and is added to the password array
   // uppercase = confirm("Include uppercase letters?")
