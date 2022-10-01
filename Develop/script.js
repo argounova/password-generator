@@ -1,44 +1,51 @@
 // User variables
-var charLength;
-var lowercase;
-var uppercase;
-var numeric;
-var special;
-// Password variables
-var length;
-var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var characters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]", ";"];
+var passwordLength;
+
+// var lowercase;
+// var uppercase;
+// var numeric;
+// var special;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var password = document.getElementById("password");
 
 // Write password to the #password input
 function writePassword() {
-  let charLength = parseInt(prompt("Enter a number between 8 and 128"));
-  if (charLength < 8 || charLength > 128) {
-    alert("Please enter a number between 8 and 128");
-  }
-  let lowercase = prompt("Would you like to include lowercase letters?  Type 'yes' or 'no':");
-  if (lowercase !== "yes" && lowercase !== "no") {
-    alert("Please type yes or no");
-  }
-  let uppercase = prompt("Would you like to include uppercase letters?  Type 'yes' or 'no':");
-  if (uppercase !== "yes" && uppercase !== "no") {
-    alert("Please type yes or no");
-  }
-  let number = prompt("Would you like to include numbers?  Type 'yes' or 'no':");
-  if (number !== "yes" && number !== "no") {
-    alert("Please type yes or no");
-  }
-  let special = prompt("Would you like to include special characters?  Type 'yes' or 'no':");
-  if (special !== "yes" && special !== "no") {
-    alert("Please type yes or no");
-  }
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // Use this number to determine the length of the password
+  let passwordLength = (parseInt(prompt("Enter a number between 8 and 128"))) - 1;
+  // Password variables
+  // var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  // var numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  // var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]", ";"];
+  // This variable will be a string including all of the characters chosen by the user
+  var includedChars = "abcdefjhiklmnopqrstuv0192344567";
+  var password = "";
 
-  passwordText.value = password;
+
+  
+  // If lowercase is true, the alpha variable is added to the password array
+  // lowercase = confirm("Include lowercase letters?");
+
+  // If uppercase is true, the alpha variable is converted to uppercase and is added to the password array
+  // uppercase = confirm("Include uppercase letters?")
+
+  // If number is true, the numeric variable is added to the password array
+  // number = confirm("Include numbers?")
+
+  // If special is true, the characters variable is added to the password array
+  // special = confirm("Include special characters?")
+  
+  for (var i = 0; i <= passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * includedChars.length);
+    password += includedChars.substring(randomNumber, randomNumber +1);
+   }
+   document.getElementById("password").value = password;
+   
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
+
+  // passwordText.value = password;
 
 }
 
