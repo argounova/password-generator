@@ -12,12 +12,22 @@ function writePassword() {
 
   // Use this number to determine the length of the password
   let passwordLength = (parseInt(prompt("Enter a number between 8 and 128"))) - 1;
+
+  // Creates an alert window if the user chooses a number outside of the given range   
+  if (passwordLength < 7 || passwordLength >= 128) {
+    alert("Please choose a number between 8 and 128!");
+    return;
+  }
   
   // If lowercase is true, the alpha variable is added to the password array
   if (confirm("Include lowercase letters?")) {
-      includedChars1 = empty.concat(alpha).join("");
-      console.log(empty);
-      console.log(includedChars1);
+    includedChars1 = empty.concat(alpha).join("");
+    console.log(empty);
+    console.log(includedChars1);
+  } else {
+    includedChars1 = empty;
+    console.log(empty);
+    console.log(includedChars1);
   }
   // If uppercase is true, the alpha variable is converted to uppercase and is added to the password array
   if (confirm("Include uppercase letters?")) {
@@ -26,18 +36,30 @@ function writePassword() {
       }).join(""))) + includedChars1;
       console.log(empty);
       console.log(includedChars2);
+  } else {
+    includedChars2 = includedChars1;
+    console.log(empty);
+    console.log(includedChars2);
   }
   // If number is true, the numeric variable is added to the password array
   if (confirm("Include numbers?")) {
       includedChars3 = empty.concat(numeric).join("") + includedChars2;
       console.log(empty);
       console.log(includedChars3);
+  } else {
+    includedChars3 = includedChars2;
+    console.log(empty);
+    console.log(includedChars3);
   }
   // If special is true, the characters variable is added to the password array
   if (confirm("Include special characters?")) {
       includedChars4 = empty.concat(specialChars.join("")) + includedChars3;
       console.log(empty);
       console.log(includedChars4);
+  } else {
+    includedChars4 = includedChars3;
+    console.log(empty);
+    console.log(includedChars4);
   }
   // For loop to randomize selection of characters
   for (var i = 0; i <= passwordLength; i++) {
