@@ -10,11 +10,13 @@ Writing the JavaScript almost entirely from scratch for this project helped me t
 
 Installation is easy!  Simply copy and paste the following URL into your favorite browser:
 
-
+https://argounova.github.io/password-generator/
 
 ## Usage
 
 Click "Generate Password".  Follow the prompts to reveal your unique password.
+
+![password generator screenshot](assets/password-generator-screenshot.png)
 
 ## Credits
 
