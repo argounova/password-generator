@@ -16,15 +16,34 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Password Parameters</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            
+            <ul class="list-group">
+              <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+                <label class="form-check-label stretched-link" for="firstCheckboxStretched">Lowercase letters</label>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+                <label class="form-check-label stretched-link" for="secondCheckboxStretched">Uppercase letters</label>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+                <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Numbers</label>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+                <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Special characters</label>
+              </li>
+            </ul>
+
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Generate My Password</button>
           </div>
         </div>
       </div>
