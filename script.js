@@ -1,5 +1,6 @@
 let generateBtn = document.querySelector('#generate');
-let password = document.getElementById('password');
+let newPassword = "";
+// let password = document.getElementById('password');
 
 function generatePassword() {
   let passwordLength = document.getElementById('passwordLength').value;
@@ -11,20 +12,19 @@ function generatePassword() {
     alert("Please choose a number between 8 and 128!");
     return;
   }
-
   for (let i = 0; i < selections.length; i++) {
     if (selections[i].checked) {
       passwordChars.push(selections[i].value);
     }
   }
-  let newPassword = passwordChars.join("");
-
+  passwordChars = passwordChars.join("");
   // For loop to randomize selection of characters
-  for (let i = 0; i <= passwordLength; i++) {
-    let randomNumber = Math.floor(Math.random() * newPassword.length);
-    password += newPassword.substring(randomNumber, randomNumber +1);
+  for (let i = 0; i < passwordLength; i++) {
+    let randomNumber = Math.floor(Math.random() * passwordChars.length);
+    newPassword += passwordChars.substring(randomNumber, randomNumber + 1);
    }
-   document.getElementById('password').value = password;
+   console.log(newPassword);
+   document.getElementById('password').value = newPassword;
 }
 
 generateBtn.addEventListener('click', generatePassword);
