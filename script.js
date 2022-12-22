@@ -1,8 +1,8 @@
 let generateBtn = document.querySelector('#generate');
-let newPassword = "";
 // let password = document.getElementById('password');
 
 function generatePassword() {
+  let newPassword = "";
   let passwordLength = document.getElementById('passwordLength').value;
   let passwordChars = new Array();
   let selections = document.querySelectorAll('input[type=checkbox');
