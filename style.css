@@ -40,6 +40,21 @@ header p {
   -webkit-text-fill-color: transparent;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #0D0E26;
+  font-family: 'Prosto One', cursive;
+  font-size: 24px;
+}
+
 section {
   display: flex;
   min-height: 92.3vh;
