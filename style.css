@@ -1,35 +1,32 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+:root {
+/* Color Theme Swatches in Hex */
+--agmund-1-hex: #59394E;
+--agmund-2-hex: #0D0E26;
+--agmund-3-hex: #56588C;
+--agmund-4-hex: #656B8C;
+--agmund-5-hex: #F2F2F2;
 
-html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+/* Color Theme Swatches in RGBA */
+--agmund-1-rgba: rgba(89, 57, 78, 1);
+--agmund-2-rgba: rgba(13, 14, 38, 1);
+--agmund-3-rgba: rgba(85, 88, 140, 1);
+--agmund-4-rgba: rgba(100, 106, 140, 1);
+--agmund-5-rgba: rgba(242, 242, 242, 1);
 }
 
 body {
-  font-family: "Bungee Spice", sans-serif;
   background-color: #f9fbfd;
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+header {
+  
+  text-align: center;
 }
 
-header {
-  text-align: center;
-  padding: 10px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 30px;
+header h1 {
+  font-family: "Bungee Spice", sans-serif;
 }
+
 
 .card {
   background-color: hsl(0, 0%, 0%);
