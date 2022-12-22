@@ -6,6 +6,12 @@
 --agmund-4-hex: #656B8C;
 --agmund-5-hex: #F2F2F2;
 
+--bluesky1: #6A9AD9;
+--bluesky2: #77ABD9;
+--bluesky3: #9BCAF2;
+--bluesky4: #D5E5F2;
+--bluesky5: #A7D5F2;
+
 /* Color Theme Swatches in RGBA */
 --agmund-1-rgba: rgba(89, 57, 78, 1);
 --agmund-2-rgba: rgba(13, 14, 38, 1);
@@ -15,29 +21,35 @@
 }
 
 body {
+  background-image: url(assets/pexels-joão-jesus-921294.jpg);
   background-color: #f9fbfd;
 }
 
 header {
-  
+  background: rgb(13,14,38);
+  background: linear-gradient(90deg, rgba(13,14,38,1) 0%, rgba(167,213,242,1) 100%);
   text-align: center;
+  height: 100px;
 }
 
 header h1 {
   font-family: "Bungee Spice", sans-serif;
 }
 
+section {
+  display: flex;
+  min-height: 92.3vh;
+  background: rgb(13,14,38);
+  background: linear-gradient(90deg, rgba(13,14,38,0.9) 0%, rgba(167,213,242,0.4) 100%);}
 
 .card {
-  background-color: hsl(0, 0%, 0%);
+  background-color: var(--agmund-2-hex);
   border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--agmund-4-hex);
   text-align: center;
   font-size: 16px;
   letter-spacing: 10px;
-  margin: 0 auto;
+  margin: auto;
   max-width: 800px;
   padding: 30px 40px;
 }
@@ -48,10 +60,6 @@ header h1 {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
-}
-
-.card-body {
-  min-height: 100px;
 }
 
 .card-footer {
@@ -73,12 +81,9 @@ header h1 {
 }
 
 .btn {
-  border: 4px solid whitesmoke;
-  background-color: rgb(0, 0, 0);
+  border: 2px solid #e7e9eb;
+  background-color: var(--agmund-2-hex);
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 0%);
   display: inline-block;
   font-family: "Bungee Spice", serif;
   font-size: 28px;
@@ -86,16 +91,6 @@ header h1 {
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
-  cursor: pointer;
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
 }
 
 #password {
@@ -136,3 +131,6 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+/* IMAGE CREDIT */
+/* Photo by João  Jesus: https://www.pexels.com/photo/clear-glass-window-with-brown-and-white-wooden-frame-921294/ */

@@ -10,69 +10,70 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Password Parameters</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="modalBody">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="abcdefghijklmnopqrstuvwxyz" id="firstCheckboxStretched">
-                <label class="form-check-label stretched-link" for="firstCheckboxStretched">Lowercase letters</label>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" id="secondCheckboxStretched">
-                <label class="form-check-label stretched-link" for="secondCheckboxStretched">Uppercase letters</label>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="0123456789" id="thirdCheckboxStretched">
-                <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Numbers</label>
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="!#$%&'()*+,-./:;<=>?@[\]^_`{|}~" id="fourthCheckboxStretched">
-                <label class="form-check-label stretched-link" for="fourthCheckboxStretched">Special characters</label>
-              </li>
-              <li class="list-group-item">
-                <div class="input-group">
-                <span class="input-group-text">Password Length:</span>
-                <input class="form-control me-1" type="text" placeholder="Enter a number between 8 and 128" id="passwordLength" aria-label="Password length">
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button id="generate" type="button" class="btn btn-primary" data-bs-dismiss="modal">Generate My Password</button>
-          </div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Password Parameters</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="abcdefghijklmnopqrstuvwxyz" id="firstCheckboxStretched">
+              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Lowercase letters</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" id="secondCheckboxStretched">
+              <label class="form-check-label stretched-link" for="secondCheckboxStretched">Uppercase letters</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="0123456789" id="thirdCheckboxStretched">
+              <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Numbers</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="!#$%&'()*+,-./:;<=>?@[\]^_`{|}~" id="fourthCheckboxStretched">
+              <label class="form-check-label stretched-link" for="fourthCheckboxStretched">Special characters</label>
+            </li>
+            <li class="list-group-item">
+              <div class="input-group">
+              <span class="input-group-text">Password Length:</span>
+              <input class="form-control me-1" type="text" placeholder="Enter a number between 8 and 128" id="passwordLength" aria-label="Password length">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button id="generate" type="button" class="btn btn-primary" data-bs-dismiss="modal">Generate My Password</button>
         </div>
       </div>
     </div>
+  </div>
 
   <header>
     <h1>Password Generator</h1>
   </header>
-
-      <div class="card">
-        <div class="card-header">
-          <h2>...Xr~4[e@ZmiBqW7!]#cH...</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password Is..."
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Choose Password Options</button>
-        </div>
+  <section>
+    <div class="card">
+      <div class="card-header">
+        <h2>...Xr~4[e@ZmiBqW7!]#cH...</h2>
       </div>
+      <div class="card-body">
+        <textarea
+          readonly
+          id="password"
+          placeholder="Your Secure Password Is..."
+          aria-label="Generated Password"
+        ></textarea>
+      </div>
+      <div class="card-footer">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Choose Password Options</button>
+      </div>
+    </div>
+  </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
