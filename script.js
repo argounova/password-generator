@@ -1,4 +1,5 @@
 let generateBtn = document.querySelector('#generate');
+let copyBtn = document.querySelector('#copyClipboard');
 
 $('#staticBackdrop').on('hidden.bs.modal', function () {
   $('input[type=checkbox]').each(function() {
@@ -8,6 +9,13 @@ $('#staticBackdrop').on('hidden.bs.modal', function () {
     this.value = "";
   });
 });
+
+function copyClipboard() {
+  let copyPassword = document.getElementById('password');
+  copyPassword.select();
+  copyPassword.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyPassword.value);
+}
 
 function generatePassword() {
   let newPassword = "";
@@ -34,7 +42,10 @@ function generatePassword() {
    }
    console.log(newPassword);
    document.getElementById('password').value = newPassword;
-
+  
+  // Displays the copy button
+  $('#copyClipboard').show();
 }
 
 generateBtn.addEventListener('click', generatePassword);
+copyBtn.addEventListener('click', copyClipboard);

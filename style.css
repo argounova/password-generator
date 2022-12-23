@@ -59,6 +59,7 @@ nav {
 }
 
 .overlay {
+  display: flex;
   min-height: 80vh;
   background: rgb(13,14,38);
   background: linear-gradient(90deg, rgba(13,14,38,0.9) 0%, rgba(167,213,242,0.4) 100%);
@@ -76,8 +77,8 @@ footer {
 }
 
 .card {
-  position: relative;
-  top: 100px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--agmund-2-hex);
   border-radius: 5px;
   color: var(--bluesky2);
@@ -89,44 +90,33 @@ footer {
   padding: 30px 40px;
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+.card-header {
+  border-bottom: var(--agmund-5-hex) solid 2px;
 }
 
 .card-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: var(--agmund-5-hex) solid 2px;
   text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
 }
 
 .btn {
+  margin: 10px 5px 0px 5px;
   border: 2px solid #e7e9eb;
   background-color: var(--agmund-2-hex);
   border-radius: 5px;
-  display: inline-block;
   font-family: 'Prosto One', cursive;
   color: var(--bluesky2);
   font-size: 28px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
   text-align: center;
+}
+
+#copyClipboard {
+  color: var(--bluesky4);
 }
 
 #password {
@@ -140,7 +130,7 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 2rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
