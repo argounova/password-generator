@@ -23,12 +23,15 @@
 body {
   background-image: url(assets/pexels-joão-jesus-921294.jpg);
   background-color: #f9fbfd;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
 }
 
 header {
   background: rgb(13,14,38);
   background: linear-gradient(90deg, rgba(13,14,38,1) 0%, rgba(167,213,242,1) 100%);
-  height: 100px;
+  min-height: fit-content;
 }
 
 header p {
@@ -57,9 +60,15 @@ nav {
 
 section {
   display: flex;
-  min-height: 92.3vh;
+  align-items: flex-start;
+  min-height: 100vh;
   background: rgb(13,14,38);
   background: linear-gradient(90deg, rgba(13,14,38,0.9) 0%, rgba(167,213,242,0.4) 100%);
+}
+
+footer {
+  height: 80px;
+  background-color: var(--agmund-2-hex);
 }
 
 .card {
