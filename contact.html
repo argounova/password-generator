@@ -26,16 +26,17 @@
   <section class="overlay">
     <div class="card input-group">
       <h1>Contact Me</h1>
-      <form className="form" class="contactCard">
+      <form className="form" class="contactCard" id="contact-form">
+        <input type="hidden" name="contact_number">
         <input
           class="form-control"
-          name="from_name"
+          name="user_name"
           type="text"
           placeholder="Name"
         >
         <input
           class="form-control"
-          name="reply_to"
+          name="user_email"
           type="email"
           placeholder="Email"
         >
@@ -46,13 +47,14 @@
           placeholder="Message"
           rows="5"
         ></textarea>
-        <button type="button" class="btn btn-primary" style="margin-top: 25px;">Submit</button>
+        <button type="submit" value="Send" class="btn btn-primary" id="contactSubmit" style="margin-top: 25px;">Submit</button>
       </form>
     </div>
   </section>
   <footer>
     <p>Designed and coded by Craig Putzstuck 2022</p>
   </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>

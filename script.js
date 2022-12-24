@@ -1,5 +1,6 @@
 let generateBtn = document.querySelector('#generate');
 let copyBtn = document.querySelector('#copyClipboard');
+let contactForm = document.getElementById('contact-form');
 
 $('#staticBackdrop').on('hidden.bs.modal', function () {
   $('input[type=checkbox]').each(function() {
@@ -9,6 +10,19 @@ $('#staticBackdrop').on('hidden.bs.modal', function () {
     this.value = "";
   });
 });
+
+function contactSubmit(e) {
+  e.preventDefault();
+  emailjs.init('ZElOBNy_cU2ZofiP0');
+  console.log(this);
+  this.contact_number.value = Math.random() * 100000 | 0;
+  emailjs.sendForm('service_peaz7nq', 'contact_formPasswordGen', this)
+    .then(function() {
+      console.log('Email sent');
+    }, function(error) {
+      console.log('Email failed to send...', error);
+    });
+}
 
 function copyClipboard() {
   let copyPassword = document.getElementById('password');
@@ -49,3 +63,4 @@ function generatePassword() {
 
 generateBtn.addEventListener('click', generatePassword);
 copyBtn.addEventListener('click', copyClipboard);
+contactForm.addEventListener('submit', contactSubmit);
