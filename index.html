@@ -105,6 +105,57 @@
       </div>
     </div>
   </section>
+
+  <!-- Contact section -->
+  <section class="overlay">
+    <div class="card input-group">
+      <h1>Contact Me</h1>
+      <form className="form" class="contactCard" id="contact-form">
+        <input type="hidden" name="contact_number">
+        <input
+          class="form-control"
+          name="user_name"
+          type="text"
+          placeholder="Name"
+        >
+        <input
+          class="form-control"
+          name="user_email"
+          type="email"
+          placeholder="Email"
+        >
+        <textarea
+          class="form-control"
+          name="message"
+          type="text"
+          placeholder="Message"
+          rows="5"
+        ></textarea>
+        <button type="submit" value="Send" class="btn btn-primary" id="contactSubmit" style="margin-top: 25px;">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section class="overlay">
+    <div class="card">
+      <h1>About</h1>  
+      <div class="list-group aboutDiv">
+          <div class="list-group-item aboutTitle">
+            <h5 class="mb-1">Technologies utilized in this project</h5>
+            <small>HTML | CSS | JavaScript | jQuery | Flexbox | Bootstrap</small>
+          </div>
+          <p class="mb-1">The password generator project is a common beginner oriented application that introduces new coders to the world of combined HTML, CSS and JavaScript.  While simple in appearance, the JavaScript required to make this work can be very challenging in the beginning as one tries to orient their conceptual thinking to code.</p>
+          <div class="list-group-item aboutTitle" style="margin-top: 20px;">
+            <h5 class="mb-1">Evolution</h5>
+          </div>
+          <p class="mb-1">This was one of my first excursions into JavaScript and although I was able to produce a functional application, the code was redundant, drawn-out and included many unnecessary variables.  I was relatively new to CSS as well and the app suffered not only from boring design but from poor responsiveness, too.</p>
+          <br>
+          <p class="mb-1">After my bootcamp with UCF ended I was encouraged to return to old projects and see if they couldn't be fixed up.  That is exactly what I have done here.  Most of the JavaScript was refactored to reduce redundancy and to simplify it.  New features have been added such as copying the resulting password to the clipboard.  A Bootstrap framework was introduced and custom modals replaced generic alerts.  Custom CSS fills in the styling gaps and the Contact/About pages were added to round out the application.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p>Designed and coded by Craig Putzstuck 2022</p>
   </footer>
