@@ -27,7 +27,8 @@ function navigateAbout(e) {
   $('#contact-section').hide();
 }
 
-function contactSubmit() {
+function contactSubmit(e) {
+  e.preventDefault();
   emailjs.init('ZElOBNy_cU2ZofiP0');
   console.log(this);
   this.contact_number.value = Math.random() * 100000 | 0;
@@ -37,6 +38,7 @@ function contactSubmit() {
     }, function(error) {
       console.log('Email failed to send...', error);
     });
+  location.reload();
 }
 
 function copyClipboard() {
