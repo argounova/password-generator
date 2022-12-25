@@ -1,6 +1,8 @@
 let generateBtn = document.querySelector('#generate');
 let copyBtn = document.querySelector('#copyClipboard');
 let contactForm = document.getElementById('contact-form');
+let navContact = document.getElementById('nav-contact');
+let navAbout = document.getElementById('nav-about');
 
 $('#staticBackdrop').on('hidden.bs.modal', function () {
   $('input[type=checkbox]').each(function() {
@@ -10,6 +12,20 @@ $('#staticBackdrop').on('hidden.bs.modal', function () {
     this.value = "";
   });
 });
+
+function navigateContact(e) {
+  e.preventDefault();
+  $('#password-section').hide();
+  $('#about-section').hide();
+  $('#contact-section').show();
+}
+
+function navigateAbout(e) {
+  e.preventDefault();
+  $('#password-section').hide();
+  $('#about-section').show();
+  $('#contact-section').hide();
+}
 
 function contactSubmit(e) {
   e.preventDefault();
@@ -64,3 +80,5 @@ function generatePassword() {
 generateBtn.addEventListener('click', generatePassword);
 copyBtn.addEventListener('click', copyClipboard);
 contactForm.addEventListener('submit', contactSubmit);
+navContact.addEventListener('click', navigateContact);
+navAbout.addEventListener('click', navigateAbout);
