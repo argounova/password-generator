@@ -27,8 +27,7 @@ function navigateAbout(e) {
   $('#contact-section').hide();
 }
 
-function contactSubmit(e) {
-  e.preventDefault();
+function contactSubmit() {
   emailjs.init('ZElOBNy_cU2ZofiP0');
   console.log(this);
   this.contact_number.value = Math.random() * 100000 | 0;
