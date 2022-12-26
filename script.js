@@ -37,9 +37,9 @@ function contactSubmit(e) {
   console.log(this);
   this.contact_number.value = Math.random() * 100000 | 0;
   emailjs.sendForm('service_peaz7nq', 'contact_formPasswordGen', this)
-    .then(function() {
+    .then(function(response) {
       $('#sendFormSucceed').modal('show');
-      console.log('Email sent');
+      console.log('Email sent', response.status, response.text);
     }, function(error) {
       $('sendFormFail').modal('show');
       console.log('Email failed to send...', error);
