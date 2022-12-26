@@ -75,10 +75,36 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 150px;
   background-color: var(--agmund-2-hex);
   text-align: center;
-  line-height: 80px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Prosto One', cursive;
+  font-size: 1.2rem;
+  color: var(--bluesky2);
+  height: 100%;
+}
+
+.footer-links a {
+  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .4em;  color: var(--bluesky2);
+}
+
+.fl-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 20%;
 }
 
 .card {
