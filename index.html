@@ -64,7 +64,45 @@
           <h1>Password copied to clipboard!</h1>
         </div>
         <div class="modal-footer justify-content-center">
-          <button id="generate" type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Submitted Successfully Modal -->
+  <div class="modal fade" id="sendFormSucceed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody" style="text-align: center;">
+          <h1>Message Sent!</h1>
+          <p>Thanks for reaching out.  Please allow 1-2 business days for a response.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary btn-sendFormOK" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Failed Modal -->
+  <div class="modal fade" id="sendFormFail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">ERROR</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody" style="text-align: center;">
+          <h1>Message Not Sent...</h1>
+          <p>Something went wrong.  Please try to submit the form again.  If the problem persists, please contact me directly at "putzstuck@gmail.com".</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary btn-sendFormOK" data-bs-dismiss="modal">OK</button>
         </div>
       </div>
     </div>

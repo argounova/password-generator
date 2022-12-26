@@ -13,6 +13,10 @@ $('#staticBackdrop').on('hidden.bs.modal', function () {
   });
 });
 
+$('.btn-sendFormOK').on('click', function() {
+  location.reload();
+});
+
 function navigateContact(e) {
   e.preventDefault();
   $('#password-section').hide();
@@ -34,11 +38,12 @@ function contactSubmit(e) {
   this.contact_number.value = Math.random() * 100000 | 0;
   emailjs.sendForm('service_peaz7nq', 'contact_formPasswordGen', this)
     .then(function() {
+      $('#sendFormSucceed').modal('show');
       console.log('Email sent');
     }, function(error) {
+      $('sendFormFail').modal('show');
       console.log('Email failed to send...', error);
     });
-  location.reload();
 }
 
 function copyClipboard() {
