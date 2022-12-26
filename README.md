@@ -16,12 +16,15 @@ https://argounova.github.io/password-generator/
 
 Click "Generate Password".  Follow the prompts to reveal your unique password.
 
-![password generator screenshot](assets/password-generator-screenshot.png)
+![password generator home](assets/ss1.png)
+![password generator contact](assets/ss3.png)
+![password generator about](assets/ss2.png)
 
 ## Credits
 
-Google Fonts: https://fonts.google.com/specimen/Bungee+Spice/tester
+Google Fonts: https://fonts.google.com/specimen/Prosto+One?query=prosto
+Photo by João  Jesus: https://www.pexels.com/photo/clear-glass-window-with-brown-and-white-wooden-frame-921294/
 
 ## License
 
-N/A - Open Source
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
